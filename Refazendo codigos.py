@@ -105,12 +105,12 @@ while True:
                 system("cls||clear")
                 #Dados para salvamento:
                 usuario = Pessoa(
-                    nome=input("Nome: "),
-                    sobrenome=input("Sobrenome: "),
+                    nome=input("Nome: ").lower(),
+                    sobrenome=input("Sobrenome: ").lower(),
                     idade=int(input("Idade: ")),
                     peso=float(input("Peso: ")),
                     altura=float(input("Altura: ")),
-                    sexo=input("Sexo: ")
+                    sexo=input("Sexo (Feminino/Masculino): ").lower()
                 )
                 #Salvando Usuário que adicionar os dados:
                 session.add(usuario)
@@ -152,7 +152,7 @@ DESEJA ADICIONAR OUTRO USUÁRIO ?
             resultado=tax_metabolica(usuario.sexo,usuario.peso,usuario.idade,usuario.altura)
             print(f"ID DIGITADO: {usuario.id}")
             print(f"Nome: {usuario.nome} {usuario.sobrenome}")
-            print(f"SEU TAXA METABOLICA BASAL: {resultado:.2f}")
+            print(f"SEU TAXA METABOLICA BASAL: {resultado:.2f} kcal/dia")
             print(f"Peso: {usuario.peso}Kg")
             print(f"Altura: {usuario.altura}m")
             print(f"Idade: {usuario.idade}")
@@ -167,7 +167,7 @@ DESEJA ADICIONAR OUTRO USUÁRIO ?
             resultado=percentual_gordura((imc(usuario.altura,usuario.peso)),usuario.idade,usuario.sexo)
             print(f"ID DIGITADO: {usuario.id}")
             print(f"Nome: {usuario.nome} {usuario.sobrenome}")
-            print(f"PERCENTUAL DE GORDURA: {resultado:.2f}")
+            print(f"PERCENTUAL DE GORDURA: {resultado:.2f} %")
             print(f"Peso: {usuario.peso}Kg")
             print(f"Altura: {usuario.altura}m")
             print(f"Idade: {usuario.idade}")
@@ -182,7 +182,7 @@ DESEJA ADICIONAR OUTRO USUÁRIO ?
             resultado=peso_ideal(usuario.altura, usuario.sexo)
             print(f"ID DIGITADO: {usuario.id}")
             print(f"Nome: {usuario.nome} {usuario.sobrenome}")
-            print(f"PESO IDEAL: {resultado:.2f}")
+            print(f"PESO IDEAL: {resultado:.2f} Kg")
             print(f"Peso: {usuario.peso}Kg")
             print(f"Altura: {usuario.altura}m")
             print(f"Idade: {usuario.idade}")
