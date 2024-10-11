@@ -93,8 +93,8 @@ def peso_ideal(altura,sexo):
     else:
         peso_ideal_homens =50+2.3*(((altura*100)/2.54)-60)
         return peso_ideal_homens
-    
 
+#Coletando dados:
 while True:
     system("cls||clear")
     menu_principal()
