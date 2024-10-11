@@ -27,6 +27,9 @@ class Pessoa(Base):
     peso = Column("Peso", Float)
     altura = Column("Altura", Float)
     sexo = Column("Sexo", String)
+    #Duvida: Como fazer para declarar sub classes. 
+    #Ex: Professor > Alunos > Pais
+    #E como fazer para acessar elas através da classe principal "Professor"
 
     #Definindo atributos da classe:
     def __init__(self,nome:str, sobrenome:str, idade:int,peso:float,altura:float,sexo:str):
