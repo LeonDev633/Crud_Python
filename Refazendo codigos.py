@@ -144,7 +144,7 @@ DESEJA ADICIONAR OUTRO USUÁRIO ?
             print(f"Peso: {usuario.peso}Kg")
             print(f"Altura: {usuario.altura}m")
             print(f"Idade: {usuario.idade}")
-            sleep(5)
+            sleep(10)
         case 3:
             system("cls||clear")
             print("="*40)
@@ -159,7 +159,7 @@ DESEJA ADICIONAR OUTRO USUÁRIO ?
             print(f"Peso: {usuario.peso}Kg")
             print(f"Altura: {usuario.altura}m")
             print(f"Idade: {usuario.idade}")
-            sleep(5)
+            sleep(10)
         case 4:
             system("cls||clear")
             print("="*40)
@@ -174,7 +174,7 @@ DESEJA ADICIONAR OUTRO USUÁRIO ?
             print(f"Peso: {usuario.peso}Kg")
             print(f"Altura: {usuario.altura}m")
             print(f"Idade: {usuario.idade}")
-            sleep(5)
+            sleep(10)
         case 5:
             system("cls||clear")
             print("="*40)
@@ -189,16 +189,16 @@ DESEJA ADICIONAR OUTRO USUÁRIO ?
             print(f"Peso: {usuario.peso}Kg")
             print(f"Altura: {usuario.altura}m")
             print(f"Idade: {usuario.idade}")
-            sleep(5)
+            sleep(10)
         case 6:
             id_usuario = int(input("INFORME O ID DO USUÁRIO QUE DESEJA DELETAR: "))
             usuario = session.query(Pessoa).filter_by(id = id_usuario).first()
             session.delete(usuario)
             session.commit()
             print(f"{usuario.nome} excluido com sucesso.")
-            sleep(5)
+            sleep(10)
         case 7:
             lista_usuarios = session.query(Pessoa).all()
             for usuario in lista_usuarios:
                 print(f"{usuario.id} - {usuario.nome} {usuario.sobrenome}")
-            sleep(5)
+            sleep(10)
