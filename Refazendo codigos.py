@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine, Column, String, Integer, Float
 from sqlalchemy.orm import sessionmaker, declarative_base 
 from os import system
-from dataclasses import dataclass
 from time import sleep
 system("cls||clear")
 
